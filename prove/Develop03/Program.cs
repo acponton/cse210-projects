@@ -4,6 +4,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
+        Reference ref1 = new Reference("John", "3", "16");
+        Console.WriteLine(ref1.GetReference());
+
+        Scripture scripture = new Scripture();
+        Console.WriteLine(scripture.GetFullScripture());
+        
+        Prompt prompt = new Prompt();
+        Console.WriteLine(prompt.GetResponse());
+
     }
 }
