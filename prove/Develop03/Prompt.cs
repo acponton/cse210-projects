@@ -10,11 +10,15 @@ public class Prompt
 
     }
 
+    public string DisplayPrompt()
+    {
+        Console.WriteLine($"Press enter to continue or type 'quit' to finish:");
+        _response = Console.ReadLine();
+        return _response;
+    }
+
     public string GetResponse()
     {
-        Console.WriteLine($"Press enter to continue or type 'quit' to finish: ");
-        _response = Console.ReadLine();
-
         return _response;
     }
 }
