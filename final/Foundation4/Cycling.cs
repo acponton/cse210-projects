@@ -13,11 +13,6 @@ namespace Foundation4
         {
             _speed = speed;
         }
-
-        // public Cycling(string date, int lengthMinutes, double speed)
-        // {
-        //     _speed = speed;
-        // }
         
         public override double GetSpeed()
         {
@@ -28,14 +23,13 @@ namespace Foundation4
         public override double GetPace()
         {
             // min per mile
-            return 60 / _speed;
+            return Math.Round((60 / _speed),2);
         }
 
-        // public override string GetSummary()
-        // {
-        //     return $"{_date} Cycling ({_lengthMinutes} min) - Speed {GetSpeed()} mph, Pace: {GetPace()} min per mile.";
-        // }
+        public string GetSummaryCycling()
+        {
+            return $"{_date} {_activityName} ({_lengthMinutes} min) - Speed {GetSpeed()} mph, Pace: {GetPace()} min per mile.";
+        }
 
     }
-
 }

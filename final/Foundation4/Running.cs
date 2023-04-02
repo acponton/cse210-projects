@@ -14,17 +14,7 @@ namespace Foundation4
             _distance = distance;
         }
 
-        // public void SetDistance(double distance)
-        // {
-        //     _distance = distance;
-        // }
-
-        // public override double GetDistance()
-        // {
-        //     // miles per hour
-        //     return _numberLaps * 50 / 1000 * 0.62;
-        // } 
-
+        
         public override double GetDistance()
         {
             // miles per hour
@@ -43,10 +33,10 @@ namespace Foundation4
             return _lengthMinutes / _distance;
         }
 
-        // public override string GetSummary()
-        // {
-        //     return $"{_date} Running ({_lengthMinutes} min) - Distance {_distance} miles, Speed {GetSpeed()} mph, Pace: {GetPace()} min per mile.";
-        // }
+        public string GetSummaryRunning()
+        {
+            return $"{_date} {_activityName} ({_lengthMinutes} min) - Distance {_distance} miles, Speed {GetSpeed()} mph, Pace: {GetPace()} min per mile.";
+        }
     }
 
 }

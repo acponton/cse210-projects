@@ -7,7 +7,6 @@ namespace Foundation4
     {
 
         protected double _numberLaps;
-        // protected double _distance;
 
 
         public void SetNumberLaps(double numberLaps) 
@@ -24,26 +23,25 @@ namespace Foundation4
         public override double GetDistance()
         {
             // miles per hour
-            return _numberLaps * 50 / 1000 * 0.62;
-            // return _distance;
+            return Math.Round((_numberLaps * 50 / 1000 * 0.62), 2);
         } 
 
         public override double GetSpeed()
         {
             // miles per hour
-            return 60 / GetPace();
+            return Math.Round((60 / GetPace()), 2);
         }
 
         public override double GetPace()
         {
             // min per mile
-            return _lengthMinutes / GetDistance();
+            return Math.Round((_lengthMinutes / GetDistance()), 2);
         }
 
-        // public override string GetSummary()
-        // {
-        //     return $"{_date} Swimming ({_lengthMinutes} min) - Distance {GetDistance()} miles, Speed {GetSpeed()} mph, Pace: {GetPace()} min per mile.";
-        // }
+        public string GetSummarySwimming()
+        {
+            return $"{_date} {_activityName} ({_lengthMinutes} min) - Distance {GetDistance()} miles, Speed {GetSpeed()} mph, Pace: {GetPace()} min per mile.";
+        }
     }
 
 }
