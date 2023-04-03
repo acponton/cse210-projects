@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-public class promptGenerator {
+public class PromptGenerator {
 
     public List<string> prompts = new List<string>()
     {
@@ -12,7 +12,7 @@ public class promptGenerator {
         "What was my favorite scripture today?"
     };
 
-    public string randomPrompts()
+    public string RandomPrompts()
     {
         var random = new Random();
         int index = random.Next(prompts.Count);
