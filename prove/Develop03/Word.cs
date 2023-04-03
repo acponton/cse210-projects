@@ -19,7 +19,7 @@ public class Word : Scripture
 
     public void Hidden()
     {
-        string hiddenWord = " _____ ";
+        string hiddenWord = " _______ ";
         int j = _splitScripture.Length;           
         Random i = new Random();
         int k = i.Next(0, j);

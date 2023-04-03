@@ -12,6 +12,7 @@ public class Prompt
 
     public string DisplayPrompt()
     {
+        Console.WriteLine("");
         Console.WriteLine($"Press enter to continue or type 'quit' to finish:");
         _response = Console.ReadLine();
         return _response;
