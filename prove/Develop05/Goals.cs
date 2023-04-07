@@ -33,9 +33,9 @@ namespace Develop05
 
         }
 
-        public void GetPoints()
+        public int GetPoints()
         {
-
+            return _points;
         }
 
         public void GetBonus()
